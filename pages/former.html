@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Former Members | Theoretical Chemical Physics</title>
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <style>
+        body { padding-top: 70px; }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar .nav-link {
+            color: rgba(0,0,0,0.8) !important;
+            font-weight: 500;
+        }
+        .navbar-brand img { height: 40px; }
+        .member-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .member-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        .member-name {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        .member-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        .member-topic {
+            color: #333;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .member-current {
+            color: #007bff;
+            font-weight: 500;
+        }
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .content-wrapper {
+            padding-bottom: 70px;
+        }
+        progress {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border: none;
+            background: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+        progress::-webkit-progress-value {
+            background: #007bff;
+        }
+    </style>
+</head>
+<body class="fixed-top-nav">
+    <header>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="../index.html">
+            <img src="../tcp.png" alt="TCP Logo">
+            <span class="font-weight-bold">Theoretical Chemical Physics</span>
+        </a>
+        
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        team
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                        <a class="dropdown-item" href="team.html">current team</a>
+                        <a class="dropdown-item" href="former.html">former members</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                        <a class="dropdown-item" href="publications.html">publications</a>
+                        <a class="dropdown-item" href="theses.html">theses</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="collaborations.html">collaborations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="software.html">software</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">news</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="join.html">join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="content-wrapper">
+        <div class="container mt-5">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="post-title">Former Members</h1>
+                </header>
+
+                <div class="members-list">
+                    <div class="member-item">
+                        <h4 class="member-name">Carolin Müller</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2021-2024</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Theoretical Chemistry, Photochemistry
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Run.-Prof. for the Theory of Electronically Excited States at FAU Erlangen-Nürnberg, Germany
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Leonardo Medrano Sandonas</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2019-2024</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Machine learning methods for understanding the chemical space of molecular systems
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Research associate, TU Dresden, Germany
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Dmitry Fedorov</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Research Scientist</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2016-2024</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Theoretical Chemical Physics, Solid State Theory, First-Principles Calculations, Spintronics
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Research Scientist Skolkovo Institute of Science and Technology, Russia
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Mario Galante</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2019-2023</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> van der Waals interactions, Density functional theory
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Postdoc, Arizona State University
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Huziel Sauceda</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2017-2022</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Machine learned force fields
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Assistant Professor, Instituto de Física, Universidad Nacional Autonoma de Mexico
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Péter Szabó</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2019-2022</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Fundamental Aspects of Molecular Forces
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> KU Leuven
+                        </div>
+                    </div>
+                    
+                    <div class="member-item">
+                        <h4 class="member-name">Mainak Sadhukhan</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2016-2018</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> van der Waals interactions beyond dipole approximations
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Assistant Professor, Department of Chemistry, IIT Kanpur
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Xiaofei Liu</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Visitor</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2016-2018</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Metal-organic networks
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Associate Professor at Nanjing University of Aeronautics and Astronautics, China
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Victor Ruiz</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2011-2016</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> van der Waals in Interfaces
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Research staff member at Helmholtz, Berlin
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Vivekanand Gobre</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2011-2016</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Electronic Structure Methods
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Assistant Professor in Pune, India
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Nicola Ferri</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2011-2016</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> van der Waals and electronic properties
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> IT in Milan, Italy
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Fairoja Cheenicode-Kabeer</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2015-2017</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Catalysis
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Post-Doc in Sweden
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Wang Gao</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2013-2015</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Defects, friction
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Professor at Jilin University, China
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Mausumi Chattopadhyaya</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2014-2017</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Wetting
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Assistant Professor in Calcutta, India
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Gionni Marchetti</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2014-2016</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Machine learning
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Post-Doc in Riga
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Wei Liu</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2010-2014</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Catalysis, interfaces
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Full Professor in Nanjing University of Science and Technology, China
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Guo-Xu Zhang</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2010-2014</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> van der Waals in solids
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Associate Professor at HIT (Harbin Institute of Technology China)
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Alberto Ambrosetti</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2012-2014</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Many-body methods
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Professor at University of Padova, Italy
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Katja Hansen</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2012-2013</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Machine learning
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Manager in 3M, Germany
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Anthony Reilly</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2012-2013</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Molecular crystals
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Professor at City University Dublin
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Javier Camarillo-Cisneros</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Visitor</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2011-2014</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Adsorption on stepped surfaces
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Researcher at Cinvestav, Chihuahua (Mexico)
+                        </div>
+                    </div>
+                    
+                    <div class="member-item">
+                        <h4 class="member-name">Johannes Hoja</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2014-2018</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Crystal Structure Predictions from First-Principle Calculations
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Tenure Track, University of Graz (Austria)
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Jan Hermann</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> PhD Student</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2013-2017</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Many Body Methods
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Senior researcher, Microsoft Research Center, Berlin
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Limin Zheng</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2015-2016</span>
+                        </div>
+                        <div class="member-topic">
+                            <i class="fas fa-microscope"></i> Nuclear quantum effects
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Visiting Professor
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Andrii Kleschonok</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2016-2018</span>
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Data Scientist at VW Labs, Germany
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Majid Mortazvi</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2016-2018</span>
+                        </div>
+                        <div class="member-current">
+                            <i class="fas fa-briefcase"></i> Data Scientist at Siemens, Germany
+                        </div>
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Jorge Alfonso Charry Martinez</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc, PhD</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2023-2024, 2019-2013</span>
+                        </div>
+
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Gregory Cordeiro Fonseca</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc, PhD</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2023-2024, 2019-2023</span>
+                        </div>
+                    </div></span>
+                        </div>
+
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Matej Ditte</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc, PhD</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> 2023-2024, 2019-2023</span>
+                        </div>
+
+                    </div>
+
+                    <div class="member-item">
+                        <h4 class="member-name">Szabolcs Goger</h4>
+                        <div class="member-meta">
+                            <span><i class="fas fa-user-tag"></i> Post-Doc, PhD</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Progress Bar Script -->
+    <script>
+        const progressBar = $("#progress");
+        
+        window.onload = function() {
+            setTimeout(progressBarSetup, 50);
+        };
+
+        function progressBarSetup() {
+            initializeProgressElement();
+            $(document).on("scroll", function() {
+                progressBar.attr({ value: getCurrentScrollPosition() });
+            });
+            $(window).on("resize", initializeProgressElement);
+        }
+
+        function getCurrentScrollPosition() {
+            return $(window).scrollTop();
+        }
+
+        function initializeProgressElement() {
+            let navbarHeight = $("#navbar").outerHeight(true);
+            progressBar.attr({
+                max: getDistanceToScroll(),
+                value: getCurrentScrollPosition(),
+            });
+        }
+
+        function getDistanceToScroll() {
+            return $(document).height() - $(window).height();
+        }
+    </script>
+</body>
+</html>

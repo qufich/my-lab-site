@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>News | Theoretical Chemical Physics</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .publication-entry {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .publication-entry:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .publication-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-journal {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .btn-action {
+            padding: 0.25rem 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-abstract {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border: none;
+        }
+
+        .btn-abstract:hover {
+            background-color: #bbdefb;
+        }
+
+        .btn-pdf {
+            background-color: #ffebee;
+            color: #d32f2f;
+            border: none;
+        }
+
+        .btn-pdf:hover {
+            background-color: #ffcdd2;
+        }
+
+        .btn-bibtex {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+            border: none;
+        }
+
+        .btn-bibtex:hover {
+            background-color: #e1bee7;
+        }
+
+        .btn-code {
+            background-color: #e8f5e9;
+            color: #388e3c;
+            border: none;
+        }
+
+        .btn-code:hover {
+            background-color: #c8e6c9;
+        }
+
+        .abstract-content, .bibtex-content {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .bibtex-content pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .year-section {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .year-heading {
+            color: #2c3e50;
+            font-weight: 600;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../tcp.png" alt="TCP Logo">
+                <span class="font-weight-bold">Theoretical Chemical Physics</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
+                            Team
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="team.html">Current Team</a>
+                            <a class="dropdown-item" href="former.html">Former Members</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="publicationsDropdown" data-toggle="dropdown">
+                            Publications
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="publications.html">Publications</a>
+                            <a class="dropdown-item" href="theses.html">Theses</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collaborations.html">Collaborations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <!-- Scrolling Progress Bar -->
+        <progress id="progress" value="0"></progress>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Content -->
+        <div class="container mt-5">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="post-title">news</h1>
+                </header>
+
+                <article>
+                    <div class="news">
+                        <table class="table table-sm table-borderless">
+                            <!-- Example news entry -->
+                            <tr>
+                                <th scope="row">Dec, 2024</th>
+                                <td>
+                                    Lab member gives a talk at Important Conference 2024.
+                                    <br><br>
+                                    New paper accepted to Major Journal!
+                                    
+                                    <!-- Example image grid -->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img src="assets/news_img/example1.jpg" 
+                                                     class="img-fluid rounded z-depth-1" 
+                                                     width="300px" height="auto" 
+                                                     title="Image title">
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img src="assets/news_img/example2.jpg" 
+                                                     class="img-fluid rounded z-depth-1" 
+                                                     width="300px" height="auto" 
+                                                     title="Image title">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Progress Bar Script -->
+    <script>
+        const progressBar = $("#progress");
+        
+        window.onload = function() {
+            setTimeout(progressBarSetup, 50);
+        };
+
+        function progressBarSetup() {
+            initializeProgressElement();
+            $(document).on("scroll", function() {
+                progressBar.attr({ value: getCurrentScrollPosition() });
+            });
+            $(window).on("resize", initializeProgressElement);
+        }
+
+        function getCurrentScrollPosition() {
+            return $(window).scrollTop();
+        }
+
+        function initializeProgressElement() {
+            let navbarHeight = $("#navbar").outerHeight(true);
+            progressBar.attr({
+                max: getDistanceToScroll(),
+                value: getCurrentScrollPosition(),
+            });
+        }
+
+        function getDistanceToScroll() {
+            return $(document).height() - $(window).height();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PhD Theses | Theoretical Chemical Physics</title>
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <style>
+        body { padding-top: 70px; }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar .nav-link {
+            color: rgba(0,0,0,0.8) !important;
+            font-weight: 500;
+        }
+        .navbar-brand img { height: 40px; }
+        .thesis-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .thesis-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        .thesis-title {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        .thesis-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            color: #007bff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            background: rgba(0,123,255,0.1);
+        }
+        .download-link:hover {
+            text-decoration: none;
+            background: rgba(0,123,255,0.2);
+            color: #0056b3;
+        }
+        .download-link i {
+            margin-right: 8px;
+        }
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .content-wrapper {
+            padding-bottom: 70px;
+        }
+        progress {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border: none;
+            background: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+        progress::-webkit-progress-value {
+            background: #007bff;
+        }
+    </style>
+</head>
+<body class="fixed-top-nav">
+    <header>
+        <body class="fixed-top-nav">
+    <!-- Header -->
+    <header>
+        <!-- Nav Bar -->
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="../index.html">
+            <img src="../tcp.png" alt="TCP Logo">
+            <span class="font-weight-bold">Theoretical Chemical Physics</span>
+        </a>
+        
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        team
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                        <a class="dropdown-item" href="team.html">current team</a>
+                        <a class="dropdown-item" href="former.html">former members</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                        <a class="dropdown-item" href="publications.html">publications</a>
+                        <a class="dropdown-item" href="theses.html">theses</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="collaborations.html">collaborations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="software.html">software</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">news</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="join.html">join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="content-wrapper">
+        <div class="container mt-5">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="post-title">PhD Theses</h1>
+                </header>
+
+                <div class="theses-list">
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Molecules in Environments: Towards Systematic Quantum Embedding of Electrons and Drude Oscillators</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> M. Ditte</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2024</span>
+                        </div>
+                        <a href="assets/img/Theses/phd_Matej_Ditte.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Development of Practical Non-Local Many-Body Polarization Functionals</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> S. Góger</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2023</span>
+                        </div>
+                        <a href="assets/img/Theses/Thesis_SG-14.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Machine Learning Force Fields Under the Microscope: Stability, Reliability, and Performance Analysis</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> G. C. Fonseca</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2023</span>
+                        </div>
+                        <a href="assets/img/Theses/Thesis.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Chemistry and Physics of Positrons Interacting with Atoms, Molecules and Fields</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> J. A. Charry Martinez</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2023</span>
+                        </div>
+                        <a href="assets/img/Theses/phd_thesis_Jorge_Charry_unilu-1.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Machine Learning Force Fields: Towards Modelling Flexible Molecules</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> V. Vassilev Galindo</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2022</span>
+                        </div>
+                        <a href="assets/img/Theses/PhDThesis_VassilevGalindo.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Intermolecular Interactions in Static Electric Fields Studied with Quantum Mechanics and Quantum Electrodynamics</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> M. R. Karimpour</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2022</span>
+                        </div>
+                        <a href="assets/img/Theses/Thesis_Karimpour.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Van der Waals Dispersion Interactions in Biomolecular Systems: Quantum-Mechanical Insights and Methodological Advances</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> M. Stöhr</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2020</span>
+                        </div>
+                        <a href="assets/img/Theses/MStoehr2020.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Towards more Efficient and Performant Computations in Quantum Chemistry with Machine Learning</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> W. Pronobis</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2020</span>
+                        </div>
+                        <a href="assets/img/Theses/Wiktor-Pronobis.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Towards Exact Molecular Dynamics Simulations with Invariant Machine-Learned Models</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> S. Chmiela</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2019</span>
+                        </div>
+                        <a href="assets/img/Theses/thesis_final_publication.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Thermodynamics and Aggregation Kinetics of Lysozyme-Derived Peptides</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> A. A. H. Zanjani</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2019</span>
+                        </div>
+                        <a href="assets/img/Theses/Thesis_AAHZanjani.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">First principles modeling of molecular crystals: crystal structure prediction and vibrational properties</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> J. Hoja</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> Uni Luxembourg, 2018</span>
+                        </div>
+                        <a href="assets/img/Theses/Thesis_Hoja_online_version.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Learning representations of atomistic systems with deep neural networks</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> K. Schütt</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2018</span>
+                        </div>
+                        <a href="assets/img/Theses/schuett_kristof.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Towards unified density-functional model of van der Waals interactions</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> J. Hermann</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> HU Berlin, 2017</span>
+                        </div>
+                        <a href="assets/img/Theses/JHermann2017.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                    
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">The Role of van der Waals Interactions on the Electronic Properties of Molecules and Materials</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> N. Ferri</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2017</span>
+                        </div>
+                        <a href="assets/img/Theses/Nicola_Ferri_PhD.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Adsorption of Atoms and Molecules on Surfaces: Density-Functional Theory with Screened van der Waals Interactions</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> V. Gonzalo Ruiz López</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2016</span>
+                        </div>
+                        <a href="assets/img/Theses/RuizLopez-Thesis-Final_20160721.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Understanding the role of van der Waals forces in solids from first principles</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> G.-X. Zhang</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2014</span>
+                        </div>
+                        <a href="assets/img/Theses/DissertationZhangGX2014_20140424.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+
+                    <div class="thesis-item">
+                        <h4 class="thesis-title">Efficient modelling of linear electronic polarization in materials using atomic response functions</h4>
+                        <div class="thesis-meta">
+                            <span><i class="fas fa-user"></i> V. V. Gobre</span>
+                            <span class="ml-3"><i class="far fa-calendar"></i> TU Berlin, 2014</span>
+                        </div>
+                        <a href="assets/img/Theses/Gobre_VV_thesis.pdf" class="download-link">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Progress Bar Script -->
+    <script>
+        const progressBar = $("#progress");
+        
+        window.onload = function() {
+            setTimeout(progressBarSetup, 50);
+        };
+
+        function progressBarSetup() {
+            initializeProgressElement();
+            $(document).on("scroll", function() {
+                progressBar.attr({ value: getCurrentScrollPosition() });
+            });
+            $(window).on("resize", initializeProgressElement);
+        }
+
+        function getCurrentScrollPosition() {
+            return $(window).scrollTop();
+        }
+
+        function initializeProgressElement() {
+            let navbarHeight = $("#navbar").outerHeight(true);
+            progressBar.attr({
+                max: getDistanceToScroll(),
+                value: getCurrentScrollPosition(),
+            });
+        }
+
+        function getDistanceToScroll() {
+            return $(document).height() - $(window).height();
+        }
+    </script>
+</body>
+</html>

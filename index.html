@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lab Website Template</title>
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <style>
+        /* Custom styles */
+        body {
+            padding-top: 70px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .navbar .nav-link {
+            color: rgba(0,0,0,0.8) !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: rgba(0,0,0,1) !important;
+        }
+
+        /* Added styles for logo */
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .post-header {
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .desc {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Progress bar styles */
+        progress {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border: none;
+            background: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background: #007bff;
+        }
+    </style>
+</head>
+
+<body class="fixed-top-nav">
+    <!-- Header -->
+    <header>
+    
+        <!-- Nav Bar -->
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="index.html">
+            <img src="tcp.png" alt="TCP Logo">
+            <span class="font-weight-bold">Theoretical Chemical Physics</span> 
+        </a>
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        team
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                        <a class="dropdown-item" href="pages/team.html">current team</a>
+                        <a class="dropdown-item" href="pages/former.html">former members</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                        <a class="dropdown-item" href="pages/publications.html">publications</a>
+                        <a class="dropdown-item" href="pages/theses.html">theses</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/collaborations.html">collaborations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/software.html">software</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/teaching.html">teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/news.html">news</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/join.html">join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Scrolling Progress Bar -->
+        <progress id="progress" value="0"></progress>
+    </header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+        <div class="post">
+            <header class="post-header">
+                <h1 class="post-title">
+                    <span class="font-weight-bold">Theoretical Chemical Physics</span>
+                </h1>
+                <p class="desc">Your Lab's Description<br>Prof. Alexandre Tkatchenko</p>
+            </header>
+
+            <article>
+                <div class="clearfix">
+                    <p><img style="width:100%;" src="assets/img/group.jpg" alt="Lab Banner"></p>
+                    <p class="caption">[From left to right] Front row: Dhruv Sharma, Leonardo Medrano Sandonas, Carolin Müller, Kyunghoon Han, Ashmita Bose, Yolande Edjogo, Oksana Charkina, Matteo Gori;<br />
+
+Second row: Jorge Charry Martinez, Igor Poltavskyi, Ariadni Boziki, Mathias Hilfiker;<br />
+
+Third row: Matteo Barborini, Artem Kokorin, Benedikt Ames, Mario Galante, Alexandre Tkatchenko, Matthieu Sarkis, Raul Ian Sosa;<br />
+
+Top row: Gregory Cordeiro Fonseca, Almaz Khabibrakhmanov, Dahvyd Wing, Loris Di Cairano, Daniel Bonhenry</p>
+
+                    <h3 id="mission"><span class="font-weight-bold">Mission</span></h3>
+                    <p>Your lab's mission statement goes here.</p>
+
+                    <h3 id="research"><span class="font-weight-bold">Research</span></h3>
+                    <p>Your research description goes here.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Progress Bar Script -->
+    <script>
+        const progressBar = $("#progress");
+        
+        window.onload = function() {
+            setTimeout(progressBarSetup, 50);
+        };
+
+        function progressBarSetup() {
+            initializeProgressElement();
+            $(document).on("scroll", function() {
+                progressBar.attr({ value: getCurrentScrollPosition() });
+            });
+            $(window).on("resize", initializeProgressElement);
+        }
+
+        function getCurrentScrollPosition() {
+            return $(window).scrollTop();
+        }
+
+        function initializeProgressElement() {
+            let navbarHeight = $("#navbar").outerHeight(true);
+            progressBar.attr({
+                max: getDistanceToScroll(),
+                value: getCurrentScrollPosition(),
+            });
+        }
+
+        function getDistanceToScroll() {
+            return $(document).height() - $(window).height();
+        }
+    </script>
+</body>
+</html>

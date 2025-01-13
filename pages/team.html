@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Team | Theoretical Chemical Physics</title>
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <style>
+        /* Custom styles */
+        body {
+            padding-top: 70px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .navbar .nav-link {
+            color: rgba(0,0,0,0.8) !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: rgba(0,0,0,1) !important;
+        }
+
+        /* Added styles for logo */
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .post-header {
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .desc {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Progress bar styles */
+        progress {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border: none;
+            background: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background: #007bff;
+        }
+
+        /* Team page specific styles */
+        .team-member {
+            padding-top: 60px;
+            margin-top: -60px;
+            padding-left: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .team-member figure {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50% !important;
+        }
+
+        .member-info h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info .contact-info {
+            margin-bottom: 1rem;
+        }
+
+        .member-info .bio {
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .team-member figure {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .member-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .z-depth-1 {
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+
+        /* Additional space at bottom to prevent content from being hidden by fixed footer */
+        .content-wrapper {
+            padding-bottom: 70px;
+        }
+    </style>
+</head>
+
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="../index.html">
+            <img src="../tcp.png" alt="TCP Logo">
+            <span class="font-weight-bold">Theoretical Chemical Physics</span>
+        </a>
+        
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        team
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                        <a class="dropdown-item" href="team.html">current team</a>
+                        <a class="dropdown-item" href="former.html">former members</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                        <a class="dropdown-item" href="publications.html">publications</a>
+                        <a class="dropdown-item" href="theses.html">theses</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="collaborations.html">collaborations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="software.html">software</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching.html">teaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">news</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="join.html">join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Scrolling Progress Bar -->
+        <progress id="progress" value="0"></progress>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Content -->
+        <div class="container mt-5">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="post-title">team</h1>
+                </header>
+
+                <article>
+                    <!-- Prof. Alexandre Tkatchenko -->
+                    <div class="row team-member">
+                        <div class="col-sm-3">
+                            <figure>
+                                <img src="assets/img/at.png" class="img-fluid z-depth-1 rounded-circle member-img" alt="Prof. Alexandre Tkatchenko">
+                            </figure>
+                        </div>
+                        <div class="col-sm-8 member-info">
+                            <h4>Prof. Alexandre Tkatchenko</h4>
+                            <p>Head of the Research Group</p>
+                            <div class="contact-info">
+                                <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=o2t1Pv8AAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                            </div>
+                            <p class="bio">Alexandre Tkatchenko is a Professor of Physics and Chair of Theoretical Chemical Physics at Uni.lu. Tkatchenko also holds a distinguished visiting professor position at the Technical University of Berlin and has co-founded two deeptech startups. He has delivered more than 450 invited talks, seminars and colloquia worldwide and served on the editorial boards of four society journals: Science Advances (AAAS), Physical Review Letters (APS), Chemical Science (RSC), and the Journal of Physical Chemistry Letters (ACS). Tkatchenko has received a number of awards, including APS Fellow from the American Physical Society, Fellow of the Royal Society of Chemistry (FRSC), Gerhard Ertl Young Investigator Award of the German Physical Society, Dirac Medal from the World Association of Theoretical and Computational Chemists (WATOC), Feynman prize from the Foresight Institute, van der Waals prize of the international conference on non-covalent interactions (ICNI), and five flagship grants from the European Research Council: a Starting Grant in 2011, a Consolidator Grant in 2017, an Advanced Grant in 2022, and Proof-of-Concept Grants in 2020 and 2023. During free time, he tinkers with both gravity and quantum mechanics.</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Igor Poltavskyi -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ip.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Igor Poltavskyi">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Igor Poltavskyi</h4>
+                        <p>Research Scientist; Team Leader on Machine Learning</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=tX82CDwAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Research Interests: Statistical physics, imaginary-time path integral methods, nuclear quantum effects, ab initio simulations</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Josh Berryman -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/jb.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Josh Berryman">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Josh Berryman</h4>
+                        <p>Research Scientist; Team Leader on Biomolecular Modeling</p>
+                        <div class="contact-info">
+                            <i class="fas fa-globe"></i> <a href="http://berrymanscience.com" target="_blank">Website</a><br>
+                            <i class="fab fa-github"></i> <a href="https://github.com/tojb" target="_blank">GitHub</a>
+                        </div>
+                        <p class="bio">I am interested in biomolecule mechanics and self assembly, in particular I like to observe protein and DNA in action and to understand these versatile molecules in their operation as nanomachines.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Matteo Barborini -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/mb.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Matteo Barborini">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Matteo Barborini</h4>
+                        <p>Research Scientist; Team Leader on HPC and Computational Quantum Mechanics</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=IL06_pgAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current interests: Development of a quantum Monte Carlo code with geminal and Pfaffian wave functions with GPU acceleration, Contribution to the project of electron-positron interactions in molecular systems, Contribution to the project of multiscale approaches for the study of long range interactions</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Matteo Gori -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/mg.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Matteo Gori">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Matteo Gori</h4>
+                        <p>Research Scientist; Team Leader for Statistical Mechanics</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">The main current research interests concern the role eventually played by classical and quantum electrodynamics interactions in the dynamical organization of biomolecular systems.</p>
+                    </div>
+                </div>
+                <hr>
+
+<!-- Matthieu Sarkis -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ms.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Matthieu Sarkis">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Matthieu Sarkis</h4>
+                        <p>Research Scientist; Team Leader for Theoretical Quantum Mechanics</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Background: 2017-2021 Postdoc in Korea Institute for Advanced Study (KIAS), 2014-2017 PhD. in String Theory at Université Pierre et Marie Curie, 2011-2014 Undergrad and Master degree in Ecole Normale Supérieure (Paris)</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Loris Di Cairano -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/lc.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Loris Di Cairano">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Loris Di Cairano</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Expertise: Geometric description of equilibrium phase transitions and Hamiltonian chaos, Applications of Quantum Field Theory-based methods to condensed matter, Theoretical methods for studying the emergence of stochastic behaviors in interacting Hamiltonian systems</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Ariadni Boziki -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ab.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Ariadni Boziki">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Ariadni Boziki</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=UluB0GEAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current interests: Development and application of atomistic modeling methods as well as machine learning techniques for an efficient and accurate modeling of terahertz (THz) spectra of molecular crystal polymorphs.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Dahvyd Wing -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/dw.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Dahvyd Wing">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Dahvyd Wing</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=gS5FDMcAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current interests: Development of interatomic potentials for large systems using neural networks combined with simple models of long-range physics, such as the many-body dispersion (MBD) method</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Apurba Nandi -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/an.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Apurba Nandi">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Apurba Nandi</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=k_wXjawAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Expertise: Theoretical Chemistry, Reaction Dynamics, Machine-Learning, Electronic Structure Theory, Molecular Dynamics, Nuclear Quantum Effects</p>
+                    </div>
+                </div>
+                <hr>
+<!-- Ashmita Bose -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/abo.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Ashmita Bose">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Ashmita Bose</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Expertise: Non-linear dynamics, Machine-Learning, Chemical computing. Current research interests: Using quantum mechanical calculations with DFTB to identify the most suitable descriptors for training machine learning models.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Daniel Bonhenry -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/db.png" class="img-fluid z-depth-1 rounded-circle member-img" alt="Daniel Bonhenry">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Daniel Bonhenry</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Expertise: Molecular dynamics simulations of biomolecules, Free-energy calculations, Molecular modelling (Homology modelling, docking, …)</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Florian Bruenig -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/fb.gif" class="img-fluid z-depth-1 rounded-circle member-img" alt="Florian Bruenig">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Florian Bruenig</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-orcid"></i> <a href="https://orcid.org/0000-0001-8583-6488cid" target="_blank">Orcid</a>
+                        </div>
+                        <p class="bio">Current interests: Machine learning models for atomistic simulations of bio and soft matter systems, Stochastic modeling of long-range interactions</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Reza Karimpour -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/mr.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Reza Karimpour">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Reza Karimpour</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=5_kGbrQAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Research interests: I am interested in studying quantum vacuum effects using the fascinating theory of quantum electrodynamics and quantum field theory. Currently I am focused on Casimir and Casimir-Polder interactions, self-energies and vacuum polarization.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Iryna Knysh -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/i.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Iryna Knysh">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Iryna Knysh</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=H33TEyUAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current Interests: Modelling excited-state properties of molecules and materials using quantum chemistry methods, Predicting excited-state properties with machine learning algorithms</p>
+                    </div>
+                </div>
+                <hr>
+<!-- Naziha Tarannam -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/nt.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Naziha Tarannam">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Naziha Tarannam</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.co.il/citations?user=jeOJASgAAAAJ&hl=iw" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current Interest: Understanding the role of long-range van der Waals interactions in large biomolecules, Developing Machine Learning Force Fields (MLFFs) for accurate depiction of diverse Biomolecular Dynamics</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Upala Mukhopadhyay -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/um.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Upala Mukhopadhyay">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Upala Mukhopadhyay</h4>
+                        <p>Post-Doc</p>
+                        <div class="contact-info">
+                            <i class="ai ai-inspire"></i> <a href="https://inspirehep.net/authors/1044823" target="_blank">INSPIRE-HEP</a>
+                        </div>
+                        <p class="bio">Research Interest: I have worked on various inter-connected topics in cosmology, e.g., Dark Energy, Dark Energy - Dark Matter interaction, cosmological tensions, Gravitational Waves, 21cm Hydrogen line and Primordial Black Holes.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Almaz Khabibrakhmanov -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/akh.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Almaz Khabibrakhmanov">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Almaz Khabibrakhmanov</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.ru/citations?user=EQZLznoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current interests: Development of universal method for the description of van der Waals interaction based on the density functional (tight-binding) theory.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Alessio Fallani -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/af.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Alessio Fallani">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Alessio Fallani</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=qIBk_FsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current Project: Design and validation of novel ML-based tools benchmarked on quantum mechanical reference data of chemical reactions, to be used to accurately predict components of the vast chemical reaction space emphasizing transition state features.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Mirela Puleva -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/mp.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Mirela Puleva">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Mirela Puleva</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?hl=en&user=yp66mIwAAAAJ" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current research: Approaching Quantum Mechanical Accuracy for Drug-Protein Binding with Machine Learning (AQMA), is a collaboration effort of the TCP group with the Luxembourg Center for Systems Biomedicine.</p>
+                    </div>
+                </div>
+                <hr>
+<!-- Kyunghoon Han -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/kh.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Kyunghoon Han">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Kyunghoon Han</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?hl=en&user=oVkngE4AAAAJ" target="_blank">Google Scholar</a><br>
+                            <i class="fas fa-globe"></i> <a href="https://kyunghoon-han.github.io/" target="_blank">Homepage</a>
+                        </div>
+                        <p class="bio">Current Research: Molecular dynamics (both theoretical and computational), Neural network models for computing thermodynamic potential, Computational simulation of molecular systems</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Adil Kabylda -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ak.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Adil Kabylda">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Adil Kabylda</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=BIi43qMAAAAJ" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current research: Machine learning methods for navigating in chemical reaction space. Development of accurate machine learning models for large and flexible molecules.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Anton Charkin-Gorbulin -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ac.png" class="img-fluid z-depth-1 rounded-circle member-img" alt="Anton Charkin-Gorbulin">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Anton Charkin-Gorbulin</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Current Interests: Development of machine learning force fields to study layered halide perovskites in collaboration with the University of Mons.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Raul Ian Sosa -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/is.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Raul Ian Sosa">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Raul Ian Sosa</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=_QlDgsgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current Research: Build computationally efficient multi-scale models that incorporate a quantum many-body treatment of van der Waals, and define continuum mechanics properties arising from quantum mechanics.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Nils Davoine -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/nd.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Nils Davoine">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Nils Davoine</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Research topics: Predict with machine learning algorithm forces & energies for complex biomolecular systems learning from DFT calculations. Positive results would be matching a relatively good accuracy and a competitive computational time regarding the calculation methods.</p>
+                    </div>
+                </div>
+                <hr>
+<!-- Dhruv Sharma -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ds.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Dhruv Sharma">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Dhruv Sharma</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=BIkWuDcAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Research Interests: Non-adiabatic Dynamics. Mixed Quantum-Classical Methods, PT Symmetry, Non-Hermitian Quantum Mechanics, Path-Integral Methods, General Relativity, Gravitational Waves, Black hole scattering</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Mathias Hilfiker -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/mh.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Mathias Hilfiker">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Mathias Hilfiker</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Research Topics: Machine-learned quantum Force Fields for molecule-protein interactions.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Sergio Suárez Dou -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/ss.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Sergio Suárez Dou">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Sergio Suárez Dou</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <!-- No specific contact info provided in CSV -->
+                        </div>
+                        <p class="bio">Current research: Investigation the process of biomolecule information transfer, with a specific emphasis on allostery. The application and validation of machine learning force fields (MLFF) is also part of the research.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Tobias Henkes -->
+                <div class="row team-member">
+                    <div class="col-sm-3">
+                        <figure>
+                            <img src="assets/img/tb.jpg" class="img-fluid z-depth-1 rounded-circle member-img" alt="Tobias Henkes">
+                        </figure>
+                    </div>
+                    <div class="col-sm-8 member-info">
+                        <h4>Tobias Henkes</h4>
+                        <p>PhD Student</p>
+                        <div class="contact-info">
+                            <i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=LIeaXIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <p class="bio">Current Interests: Development of machine learning force fields with balanced description of short- and long-range interactions for large systems, Combination of machine learning force field and electronic structure frameworks</p>
+                    </div>
+                </div>
+                <hr>
+
+            </article>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Progress Bar Script -->
+    <script>
+        const progressBar = $("#progress");
+        
+        window.onload = function() {
+            setTimeout(progressBarSetup, 50);
+        };
+
+        function progressBarSetup() {
+            initializeProgressElement();
+            $(document).on("scroll", function() {
+                progressBar.attr({ value: getCurrentScrollPosition() });
+            });
+            $(window).on("resize", initializeProgressElement);
+        }
+
+        function getCurrentScrollPosition() {
+            return $(window).scrollTop();
+        }
+
+        function initializeProgressElement() {
+            let navbarHeight = $("#navbar").outerHeight(true);
+            progressBar.attr({
+                max: getDistanceToScroll(),
+                value: getCurrentScrollPosition(),
+            });
+        }
+
+        function getDistanceToScroll() {
+            return $(document).height() - $(window).height();
+        }
+    </script>
+</body>
+</html>
+
