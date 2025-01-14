@@ -15,68 +15,32 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <style>
-        body { padding-top: 70px; }
+        /* Custom styles */
+        body {
+            padding-top: 70px;
+        }
+
         .navbar {
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
+
         .navbar .nav-link {
             color: rgba(0,0,0,0.8) !important;
             font-weight: 500;
         }
-        .navbar-brand img { height: 40px; }
-        .thesis-item {
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            background: white;
-            transition: all 0.3s ease;
+
+        .navbar .nav-link:hover {
+            color: rgba(0,0,0,1) !important;
         }
-        .thesis-item:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            transform: translateY(-2px);
+
+        /* Added styles for logo */
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
         }
-        .thesis-title {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.25rem;
-            font-weight: 500;
-        }
-        .thesis-meta {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-        .download-link {
-            display: inline-flex;
-            align-items: center;
-            color: #007bff;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-            background: rgba(0,123,255,0.1);
-        }
-        .download-link:hover {
-            text-decoration: none;
-            background: rgba(0,123,255,0.2);
-            color: #0056b3;
-        }
-        .download-link i {
-            margin-right: 8px;
-        }
-        footer {
-            background-color: white;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            border-top: 1px solid #eee;
-        }
-        .content-wrapper {
-            padding-bottom: 70px;
-        }
+
+        /* Progress bar styles */
         progress {
             position: fixed;
             top: 56px;
@@ -88,76 +52,139 @@
             appearance: none;
             -webkit-appearance: none;
         }
+
         progress::-webkit-progress-bar {
             background: transparent;
         }
+
         progress::-webkit-progress-value {
             background: #007bff;
         }
+
+        /* Collaborations specific styles */
+        .collaborations-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .collaborations-list li {
+            margin-bottom: 1.2rem;
+            padding: 1rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .collaborations-list li:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .collaborator-name {
+            font-weight: 500;
+            color: #24292e;
+        }
+
+        .institution {
+            color: #586069;
+            margin-left: 0.5rem;
+        }
+
+        .country-tag {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            border-radius: 3px;
+            background-color: #f1f8ff;
+            color: #0366d6;
+        }
+
+        /* Region dividers */
+        .region-divider {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #586069;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Content wrapper */
+        .content-wrapper {
+            padding-bottom: 70px;
+        }
     </style>
 </head>
+
 <body class="fixed-top-nav">
-    <header>
-        <body class="fixed-top-nav">
     <!-- Header -->
     <header>
         <!-- Nav Bar -->
-        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <!-- Replace the existing navbar with this updated version -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand title font-weight-lighter" href="../index.html">
+        <a class="navbar-brand" href="../index.html">
             <img src="../tcp.png" alt="TCP Logo">
             <span class="font-weight-bold">Theoretical Chemical Physics</span>
         </a>
         
-        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.html">home</a>
+                    <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        team
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
+                        Team
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
-                        <a class="dropdown-item" href="team.html">current team</a>
-                        <a class="dropdown-item" href="former.html">former members</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="team.html">Current Team</a>
+                        <a class="dropdown-item" href="former.html">Former Members</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        publications
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown">
+                        Publications
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                        <a class="dropdown-item" href="publications.html">publications</a>
-                        <a class="dropdown-item" href="theses.html">theses</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="publications.html">Publications</a>
+                        <a class="dropdown-item" href="theses.html">Theses</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="collaborations.html">collaborations</a>
+                    <a class="nav-link active" href="collaborations.html">Collaborations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="software.html">software</a>
+                    <a class="nav-link" href="software.html">Software</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="teaching.html">teaching</a>
+                    <a class="nav-link" href="teaching.html">Teaching</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">news</a>
+                    <a class="nav-link" href="news.html">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="join.html">join</a>
+                    <a class="nav-link" href="join.html">Join</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
     <div class="content-wrapper">
         <div class="container mt-5">

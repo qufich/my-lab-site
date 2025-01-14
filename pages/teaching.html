@@ -61,55 +61,35 @@
             background: #007bff;
         }
 
-        /* Teaching page specific styles */
-        .course-list {
-            list-style: none;
+        /* Collaborations specific styles */
+        .collaborations-list {
+            list-style-type: none;
             padding-left: 0;
         }
 
-        .course-list li {
-            margin-bottom: 1.5rem;
+        .collaborations-list li {
+            margin-bottom: 1.2rem;
             padding: 1rem;
             border-radius: 4px;
             transition: all 0.2s ease;
         }
 
-        .course-list li:hover {
+        .collaborations-list li:hover {
             background-color: #f8f9fa;
             transform: translateX(5px);
         }
 
-        .course-list a {
-            color: #0366d6;
-            text-decoration: none;
+        .collaborator-name {
             font-weight: 500;
-        }
-
-        .course-list a:hover {
-            text-decoration: underline;
-        }
-
-        .semester {
-            display: inline-block;
-            font-weight: 600;
             color: #24292e;
-            margin-right: 0.5rem;
         }
 
-        .year-divider {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+        .institution {
             color: #586069;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3rem;
+            margin-left: 0.5rem;
         }
 
-        .course-type-icon {
-            margin-right: 0.5rem;
-            color: #586069;
-        }
-
-        .course-tag {
+        .country-tag {
             display: inline-block;
             padding: 0.2rem 0.5rem;
             margin-left: 0.5rem;
@@ -117,6 +97,15 @@
             border-radius: 3px;
             background-color: #f1f8ff;
             color: #0366d6;
+        }
+
+        /* Region dividers */
+        .region-divider {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #586069;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3rem;
         }
 
         /* Footer styles */
@@ -141,62 +130,61 @@
     <!-- Header -->
     <header>
         <!-- Nav Bar -->
-        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <!-- Replace the existing navbar with this updated version -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand title font-weight-lighter" href="../index.html">
+        <a class="navbar-brand" href="../index.html">
             <img src="../tcp.png" alt="TCP Logo">
             <span class="font-weight-bold">Theoretical Chemical Physics</span>
         </a>
         
-        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.html">home</a>
+                    <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        team
+                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
+                        Team
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="teamDropdown">
-                        <a class="dropdown-item" href="team.html">current team</a>
-                        <a class="dropdown-item" href="former.html">former members</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="team.html">Current Team</a>
+                        <a class="dropdown-item" href="former.html">Former Members</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        publications
+                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown">
+                        Publications
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
-                        <a class="dropdown-item" href="publications.html">publications</a>
-                        <a class="dropdown-item" href="theses.html">theses</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="publications.html">Publications</a>
+                        <a class="dropdown-item" href="theses.html">Theses</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="collaborations.html">collaborations</a>
+                    <a class="nav-link active" href="collaborations.html">Collaborations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="software.html">software</a>
+                    <a class="nav-link" href="software.html">Software</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="teaching.html">teaching</a>
+                    <a class="nav-link" href="teaching.html">Teaching</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">news</a>
+                    <a class="nav-link" href="news.html">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="join.html">join</a>
+                    <a class="nav-link" href="join.html">Join</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
         <!-- Scrolling Progress Bar -->
         <progress id="progress" value="0"></progress>

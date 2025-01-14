@@ -69,3 +69,34 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     background: #007bff;
 }
+.navbar .nav-link {
+    /* Remove the !important and black color override */
+    color: rgb(108, 117, 125) !important;  /* Base gray color for non-active links */
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: rgb(33, 37, 41) !important;  /* Darker color on hover */
+}
+
+.navbar .nav-link.active,
+.navbar .nav-item.active .nav-link {
+    color: rgb(33, 37, 41) !important;  /* Dark color for active/current page */
+}
+
+/* Update dropdown items to match the same color scheme */
+.navbar .dropdown-item {
+    color: rgb(108, 117, 125);
+    transition: color 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    color: rgb(33, 37, 41);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbar .dropdown-item.active {
+    color: rgb(33, 37, 41);
+    background-color: rgba(0, 0, 0, 0.05);
+}
