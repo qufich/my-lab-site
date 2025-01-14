@@ -4,23 +4,66 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Navigation */
+/* Navigation - Updated for consistency */
 .navbar {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-weight: 600;
 }
 
 .navbar .nav-link {
-    color: rgba(0,0,0,0.8) !important;
-    font-weight: 500;
+    color: rgb(108, 117, 125) !important;  /* Base gray color */
+    font-weight: 400;
     padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
 }
 
 .navbar .nav-link:hover {
-    color: rgba(0,0,0,1) !important;
+    color: rgb(33, 37, 41) !important;
 }
 
-/* Content */
+.navbar .nav-link.active {
+    color: #007bff !important;
+    font-weight: 500;
+}
+
+.navbar .dropdown-menu {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .dropdown-item {
+    color: rgb(108, 117, 125);
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    color: rgb(33, 37, 41);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbar .dropdown-item.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Content styles - Preserved from original */
 .post-header {
     margin-bottom: 2rem;
 }
@@ -41,154 +84,37 @@ body {
     text-align: center;
 }
 
-/* Footer */
-footer {
-    background-color: white;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    border-top: 1px solid #eee;
-}
-
-/* Progress bar */
-progress {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    border: none;
-    background: transparent;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-progress::-webkit-progress-bar {
-    background: transparent;
-}
-
-progress::-webkit-progress-value {
-    background: #007bff;
-}
-.navbar .nav-link {
-    /* Remove the !important and black color override */
-    color: rgb(108, 117, 125) !important;  /* Base gray color for non-active links */
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.navbar .nav-link:hover {
-    color: rgb(33, 37, 41) !important;  /* Darker color on hover */
-}
-
-.navbar .nav-link.active,
-.navbar .nav-item.active .nav-link {
-    color: rgb(33, 37, 41) !important;  /* Dark color for active/current page */
-}
-
-/* Update dropdown items to match the same color scheme */
-.navbar .dropdown-item {
-    color: rgb(108, 117, 125);
-    transition: color 0.2s ease;
-}
-
-.navbar .dropdown-item:hover {
-    color: rgb(33, 37, 41);
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.navbar .dropdown-item.active {
-    color: rgb(33, 37, 41);
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Mobile navbar styles */
-@media (max-width: 575.98px) {
-    .navbar-brand span {
-        display: none;  /* Hide the text on very small screens */
-    }
-    
-    .navbar-collapse {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        z-index: 1000;
-    }
-    
-    .navbar-nav {
-        margin-top: 0.5rem;
-    }
-    
-    .dropdown-menu {
-        border: none;
-        background-color: #f8f9fa;
-        padding: 0.5rem 0;
-    }
-    
-    .dropdown-item {
-        padding: 0.5rem 1.5rem;
-    }
-}
-
-/* Ensure toggle button is visible */
-.navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 0.25rem;
-    margin-left: auto;
-}
-
-/* Remove any conflicting styles */
-.icon-bar {
-    display: none;
-}
-
-/* General styles */
-body {
-    padding-top: 70px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Team member styles */
+/* Team member styles - Preserved from original */
 .team-member {
     margin-bottom: 2rem;
     padding: 1rem;
     transition: all 0.3s ease;
 }
 
-/* Image container styles */
 .team-member figure {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 0;
-    padding-bottom: 100%; /* Creates a square aspect ratio */
+    padding-bottom: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 50%; /* Makes the container circular */
+    border-radius: 50%;
     background-color: #f8f9fa;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Image styles */
 .team-member .member-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire space */
-    border-radius: 50%; /* Makes the image circular */
-    border: 3px solid white; /* Adds a white border */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
 }
 
-/* Member info styles */
 .member-info {
     padding: 1rem;
 }
@@ -217,19 +143,52 @@ body {
     margin-top: 1rem;
 }
 
-/* Hover effects */
-.team-member:hover {
-    background-color: #f8f9fa;
-    transform: translateX(5px);
+/* Progress bar - Preserved from original */
+progress {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-.team-member:hover .member-img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+progress::-webkit-progress-bar {
+    background: transparent;
 }
 
-/* Responsive adjustments */
+progress::-webkit-progress-value {
+    background: #007bff;
+}
+
+/* Footer - Preserved from original */
+footer {
+    background-color: white;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+/* Mobile responsiveness - Updated */
 @media (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        z-index: 1000;
+    }
+
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
+
     .team-member figure {
         max-width: 200px;
         margin: 0 auto;
@@ -239,4 +198,36 @@ body {
         text-align: center;
         padding-top: 1.5rem;
     }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand span {
+        display: none;
+    }
+    
+    .dropdown-menu {
+        border: none;
+        background-color: #f8f9fa;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* Navbar toggle button */
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0.25rem;
+    margin-left: auto;
+}
+
+/* Remove conflicting icon-bar styles */
+.icon-bar {
+    display: none;
 }
