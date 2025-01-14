@@ -19,179 +19,101 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <style>
-        /* Custom styles */
         body {
-            padding-top: 70px;
+            padding-top: 80px;
+            padding-bottom: 60px;
         }
 
         .navbar {
             background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .navbar .nav-link {
-            color: rgba(0,0,0,0.8) !important;
-            font-weight: 500;
-        }
-
-        .navbar .nav-link:hover {
-            color: rgba(0,0,0,1) !important;
-        }
-
-        /* Added styles for logo */
         .navbar-brand img {
             height: 40px;
             margin-right: 10px;
         }
 
-        /* Progress bar styles */
-        progress {
-            position: fixed;
-            top: 56px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            border: none;
-            background: transparent;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-
-        progress::-webkit-progress-bar {
-            background: transparent;
-        }
-
-        progress::-webkit-progress-value {
-            background: #007bff;
-        }
-
-        /* Collaborations specific styles */
-        .collaborations-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .collaborations-list li {
-            margin-bottom: 1.2rem;
-            padding: 1rem;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .collaborations-list li:hover {
-            background-color: #f8f9fa;
-            transform: translateX(5px);
-        }
-
-        .collaborator-name {
-            font-weight: 500;
-            color: #24292e;
-        }
-
-        .institution {
-            color: #586069;
-            margin-left: 0.5rem;
-        }
-
-        .country-tag {
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            margin-left: 0.5rem;
-            font-size: 0.8rem;
-            border-radius: 3px;
-            background-color: #f1f8ff;
-            color: #0366d6;
-        }
-
-        /* Region dividers */
-        .region-divider {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #586069;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3rem;
-        }
-
-        /* Footer styles */
         footer {
             background-color: white;
+            border-top: 1px solid #e0e0e0;
             padding: 1rem 0;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
-        /* Content wrapper */
-        .content-wrapper {
-            padding-bottom: 70px;
+        /* Content specific styles */
+        .post-header {
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 
-<body class="fixed-top-nav">
-    <!-- Header -->
-    <header>
-        <!-- Nav Bar -->
-        <!-- Replace the existing navbar with this updated version -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">
-            <img src="../tcp.png" alt="TCP Logo">
-            <span class="font-weight-bold">Theoretical Chemical Physics</span>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../tcp.png" alt="TCP Logo">
+                <span class="font-weight-bold">Theoretical Chemical Physics</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
-                        Team
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="team.html">Team</a>
-                        <a class="dropdown-item" href="former.html">Former Members</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown">
-                        Publications
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="publications.html">Publications</a>
-                        <a class="dropdown-item" href="theses.html">Theses</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="collaborations.html">Collaborations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="software.html">Software</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="teaching.html">Teaching</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="join.html">Join</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
+                            Team
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="team.html">Team</a>
+                            <a class="dropdown-item" href="former.html">Former Members</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown">
+                            Publications
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="publications.html">Publications</a>
+                            <a class="dropdown-item" href="theses.html">Theses</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collaborations.html">Collaborations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="teaching.html">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
         <!-- Scrolling Progress Bar -->
-        <progress id="progress" value="0"></progress>
+        <!-- progress id="progress" value="0"></progress -->
     </header>
 
     <div class="content-wrapper">
