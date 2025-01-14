@@ -138,3 +138,51 @@ progress::-webkit-progress-value {
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
   }
 }
+
+/* Mobile navbar styles */
+@media (max-width: 575.98px) {
+    .navbar-brand span {
+        display: none;  /* Hide the text on very small screens */
+    }
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        z-index: 1000;
+    }
+    
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
+    
+    .dropdown-menu {
+        border: none;
+        background-color: #f8f9fa;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* Ensure toggle button is visible */
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0.25rem;
+    margin-left: auto;
+}
+
+/* Remove any conflicting styles */
+.icon-bar {
+    display: none;
+}
