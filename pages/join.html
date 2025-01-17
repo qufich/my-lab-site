@@ -37,6 +37,13 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        footer.visible {
+            transform: translateY(0);
         }
 
         /* Content specific styles */
@@ -174,13 +181,18 @@ Development and application of improved path integral methods for quantum nuclea
 
 <p>Applications for PhD studies and postdoctoral positions are accepted from qualified candidates at any time.</p>
 
-        <!-- Footer -->    
+   
+    <!-- Footer -->    
     <footer id="footer">
         <div class="container mt-0">
             © Copyright 2024 Theoretical Chemical Physics.
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         function handleScroll() {
             const footer = document.getElementById('footer');
@@ -188,8 +200,8 @@ Development and application of improved path integral methods for quantum nuclea
             const documentHeight = document.documentElement.scrollHeight;
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             
-            // Calculate how close to the bottom we are
-            const scrolledToBottom = (windowHeight + scrollTop) >= (documentHeight - 50);
+            // Show footer when within 20px of bottom
+            const scrolledToBottom = (windowHeight + scrollTop) >= (documentHeight - 20);
             
             // Show/hide footer based on scroll position
             if (scrolledToBottom) {
@@ -203,12 +215,15 @@ Development and application of improved path integral methods for quantum nuclea
         window.addEventListener('scroll', handleScroll);
         
         // Initial check on page load
-        handleScroll();
+        window.addEventListener('load', handleScroll);
+        
+        // Check on any dynamic content changes
+        const observer = new MutationObserver(handleScroll);
+        observer.observe(document.body, { 
+            childList: true, 
+            subtree: true 
+        });
     </script>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

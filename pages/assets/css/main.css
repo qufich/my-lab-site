@@ -231,3 +231,12 @@ footer {
 .icon-bar {
     display: none;
 }
+
+
+
+footer.visible {
+    transform: translateY(0);
+}
+.content-wrapper {
+    padding-bottom: 60px;
+}
