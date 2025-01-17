@@ -356,11 +356,36 @@
     </div>
 
     <!-- Footer -->    
-    <footer class="fixed-bottom">
+    <footer id="footer">
         <div class="container mt-0">
             © Copyright 2024 Theoretical Chemical Physics.
         </div>
     </footer>
+
+    <script>
+        function handleScroll() {
+            const footer = document.getElementById('footer');
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            
+            // Calculate how close to the bottom we are
+            const scrolledToBottom = (windowHeight + scrollTop) >= (documentHeight - 50);
+            
+            // Show/hide footer based on scroll position
+            if (scrolledToBottom) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initial check on page load
+        handleScroll();
+    </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
