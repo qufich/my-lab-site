@@ -172,11 +172,9 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="publications.html">Research</a>
+                        <a class="dropdown-item" href="collaborations.html">Collaborations</a>
                         <a class="dropdown-item" href="theses.html">Theses</a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="collaborations.html">Collaborations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="software.html">Software</a>
@@ -205,19 +203,77 @@
             <div class="post">
 
                 <article>
-                    <p>Our group develops state-of-the-art software for [your field]. Below are our main open-source repositories:</p>
+                    <!--p>Our group develops state-of-the-art software for [your field]. Below are our main open-source repositories:</p-->
 
                     <h2 id="github-repositories">GitHub Repositories</h2>
 
                     <div class="repositories">
                         <!-- Example repository card -->
-                        <div class="repo p-2 text-center">
-                            <a href="https://github.com/username/repo" target="_blank" rel="external nofollow noopener">
-                                <img class="repo-img-light w-100" alt="username/repo" 
-                                    src="https://github-readme-stats.vercel.app/api/pin/?username=username&repo=repo&theme=default&show_owner=true">
-                                <img class="repo-img-dark w-100" alt="username/repo" 
-                                    src="https://github-readme-stats.vercel.app/api/pin/?username=username&repo=repo&theme=dark&show_owner=true">
-                            </a>
+                        <div class="repo-card">
+                            <h3 class="repo-name">
+                                <a href="https://github.com/stefanch/sGDML" target="_blank" rel="noopener">
+                                    
+                                    <img src="assets/img/git.png" style="height: 24px; width: auto; margin-right: 10px;" alt="Git Logo">sGDML
+                                </a>
+                            </h3>
+                            <p class="repo-description">
+                                Symmetric Gradient Domain Machine Learning: Reference implementation of the sGDML model for constructing molecular force fields.
+                            </p>
+                            <div class="repo-stats">
+                                <div class="repo-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>Stars</span>
+                                </div>
+                                <div class="repo-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Forks</span>
+                                </div>
+                            </div>
+                            
+                            <!-- libmbd repository card -->
+                        <div class="repo-card">
+                            <h3 class="repo-name">
+                                <a href="https://github.com/libmbd/libmbd" target="_blank" rel="noopener">
+                                    <img src="assets/img/git.png" style="height: 24px; width: auto; margin-right: 10px;" alt="Git Logo">
+                                    libmbd
+                                </a>
+                            </h3>
+                            <p class="repo-description">
+                                Many-body dispersion library: A library for accurate many-body dispersion calculations in quantum chemistry.
+                            </p>
+                            <div class="repo-stats">
+                                <div class="repo-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>Stars</span>
+                                </div>
+                                <div class="repo-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Forks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- so3lr repository card -->
+                        <div class="repo-card">
+                            <h3 class="repo-name">
+                                <a href="https://github.com/general-molecular-simulations/so3lr" target="_blank" rel="noopener">
+                                    <img src="assets/img/SO3LR.png" style="height: 24px; width: auto; margin-right: 10px;" alt="Git Logo">
+                                    so3lr
+                                </a>
+                            </h3>
+                            <p class="repo-description">
+                                SO(3) Learning and Registration: A framework for molecular structure learning and registration using SO(3) equivariant neural networks.
+                            </p>
+                            <div class="repo-stats">
+                                <div class="repo-stat">
+                                    <i class="fas fa-star"></i>
+                                    <span>Stars</span>
+                                </div>
+                                <div class="repo-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Forks</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
