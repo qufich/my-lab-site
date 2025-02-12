@@ -688,8 +688,36 @@
         <span><i class="fas fa-user-tag"></i> PhD Student</span>
     </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"></script>
+
+    <!-- Footer visibility script -->
+    <script>
+        function handleScroll() {
+            const footer = document.getElementById('footer');
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrolledToBottom = (windowHeight + scrollTop) >= (documentHeight - 50);
+            
+            if (scrolledToBottom) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
 </body>
 </html>
