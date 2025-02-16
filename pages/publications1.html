@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Publications | Theoretical Chemical Physics</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/tcp.png">
+    <link rel="apple-touch-icon" href="assets/img/tcp.png">
+    
+    <style>
+        body {
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .publication-entry {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .publication-entry:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .publication-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-journal {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .btn-action {
+            padding: 0.25rem 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-abstract {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border: none;
+        }
+
+        .btn-abstract:hover {
+            background-color: #bbdefb;
+        }
+
+        .btn-pdf {
+            background-color: #ffebee;
+            color: #d32f2f;
+            border: none;
+        }
+
+        .btn-pdf:hover {
+            background-color: #ffcdd2;
+        }
+
+        .btn-bibtex {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+            border: none;
+        }
+
+        .btn-bibtex:hover {
+            background-color: #e1bee7;
+        }
+
+        .btn-code {
+            background-color: #e8f5e9;
+            color: #388e3c;
+            border: none;
+        }
+
+        .btn-code:hover {
+            background-color: #c8e6c9;
+        }
+
+        .abstract-content, .bibtex-content {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .bibtex-content pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .year-section {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .year-heading {
+            color: #2c3e50;
+            font-weight: 600;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        footer.visible {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../tcp.png" alt="TCP Logo">
+                <span class="font-weight-bold">Theoretical Chemical Physics</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" data-toggle="dropdown">
+                            Team
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="team.html">Team</a>
+                            <a class="dropdown-item" href="former.html">Former Members</a>
+                            <a class="dropdown-item" href="photos.html">Photos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="publicationsDropdown" data-toggle="dropdown">
+                            Research
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item active" href="publications.html">Research</a>
+                            <a class="dropdown-item" href="theses.html">Theses</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <!--li class="nav-item">
+                        <a class="nav-link" href="teaching.html">Teaching</a>
+                    </li-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- 2024 Publications -->
+        <section class="year-section">
+            <h2 class="year-heading">2024</h2>
+            
+            <div class="publication-entry">
+                <div class="row">
+                    <div class="col-md-3 publication-preview mb-3 mb-md-0">
+                        <img src="assets/img/publication_preview/example.jpg" alt="Publication preview">
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="publication-title">Example Publication Title</h3>
+                        <div class="publication-authors">Author One, Author Two, Author Three</div>
+                        <div class="publication-journal">Journal Name, 2024</div>
+                        
+                        <div class="publication-actions">
+                            <button class="btn-action btn-abstract" onclick="toggleAbstract(this)">
+                                <i class="fas fa-chevron-down"></i> Abstract
+                            </button>
+                            <a href="#" class="btn-action btn-pdf">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button class="btn-action btn-bibtex" onclick="toggleBibtex(this)">
+                                <i class="fas fa-quote-right"></i> BibTeX
+                            </button>
+                            <a href="#" class="btn-action btn-code">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+
+                        <div class="abstract-content">
+                            <p>Example abstract text goes here...</p>
+                        </div>
+
+                        <div class="bibtex-content">
+                            <pre>@article{example2024,
+    title={Example Publication Title},
+    author={One, Author and Two, Author and Three, Author},
+    journal={Journal Name},
+    year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container mt-0">
+            © Copyright 2024 Theoretical Chemical Physics.
+        </div>
+    </footer>
+
+    <script>
+        function handleScroll() {
+            const footer = document.getElementById('footer');
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            
+            // Calculate how close to the bottom we are
+            const scrolledToBottom = (windowHeight + scrollTop) >= (documentHeight - 50);
+            
+            // Show/hide footer based on scroll position
+            if (scrolledToBottom) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initial check on page load
+        handleScroll();
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function toggleAbstract(button) {
+            const content = button.closest('.publication-actions').nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                content.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+
+        function toggleBibtex(button) {
+            const content = button.closest('.publication-actions').nextElementSibling.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.classList.remove('fa-quote-left');
+                icon.classList.add('fa-quote-right');
+            } else {
+                content.style.display = 'block';
+                icon.classList.remove('fa-quote-right');
+                icon.classList.add('fa-quote-left');
+            }
+        }
+    </script>
+</body>
+</html>
