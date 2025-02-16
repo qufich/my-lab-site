@@ -64,17 +64,15 @@
             text-align: center;
         }
 
+
         footer {
             background-color: white;
             border-top: 1px solid #e0e0e0;
             padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
             width: 100%;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
+            margin-top: 100px; /* Adds space above the footer */
         }
+
 
         footer.visible {
             transform: translateY(0);
@@ -131,7 +129,7 @@
                     <div class="dropdown-menu" aria-labelledby="teamDropdown">
                         <a class="dropdown-item" href="pages/team.html">Team</a>
                         <a class="dropdown-item" href="pages/former.html">Former Members</a>
-                        <a class="dropdown-item" href="photos.html">Photos</a>
+                        <a class="dropdown-item" href="pages/photos.html">Photos</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -174,7 +172,7 @@
 
             <article>
                 <div class="clearfix">
-                    <p><img style="width:100%;" src="pages/assets/img/group.jpg" alt="Lab Banner"></p>
+                    <p><img style="width:100%;" src="pages/assets/img/g23.jpg" alt="Lab Banner"></p>
                     <p class="caption">[From left to right] Front row: Dhruv Sharma, Leonardo Medrano Sandonas, Carolin Müller, Kyunghoon Han, Ashmita Bose, Yolande Edjogo, Oksana Charkina, Matteo Gori;<br />
 
 Second row: Jorge Charry Martinez, Igor Poltavskyi, Ariadni Boziki, Mathias Hilfiker;<br />
@@ -185,16 +183,11 @@ Top row: Gregory Cordeiro Fonseca, Almaz Khabibrakhmanov, Dahvyd Wing, Loris Di 
 
                     <h3 id="mission"><span class="font-weight-bold"></span></h3>
                     <!--p>Welcome to the Theoretical Chemical Physics group at the University of Luxembourg, lead by Prof. Alexandre Tkatchenko. Our group develops novel methodologies and undertakes ambitious computational projects to address fundamental and challenging aspects of systems at the intersection of physics, chemistry, and biology. The key goal of our work is to bring quantum-mechanical level of insight to large and complex systems. This can only be achieved by unifying physical theories at varying spatial and temporal scales, which is achieved by combining first-principles quantum methods, coarse-grained statistical approaches, as well as developing novel mathematical and computational techniques. Our group includes physicists, chemists, mathematicians, and computer scientists, and we collaborate with many leading researchers across the world. Our publication list highlights the breadth of approaches we develop and the application of these techniques for achieving fundamental understanding of molecules and materials.</p><br /-->
-
-                    <h3 id="research"><span class="font-weight-bold"><!--Research--></span></h3>
-                    <p> <!--Your research description goes here.--> </p>
                 </div>
             </article>
         </div>
     </div>
-body {
-    padding-bottom: 100px;
-}
+
     <!-- Footer -->
     <footer id="footer">
         <div class="container mt-0">
