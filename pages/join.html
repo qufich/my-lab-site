@@ -15,7 +15,7 @@
     <style>
         /* All previous styles remain exactly the same */
         body {
-            padding-top: 80px;
+            padding-top: 50px;
             padding-bottom: 60px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
@@ -38,7 +38,9 @@
         }
 
         .team-photo-container {
-            width: 100%;
+            width: 70%;
+            /* margin: 0 auto; */
+            margin: 1rem auto;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -57,8 +59,8 @@
 
         .location-section {
             background-color: #f8f9fa;
-            padding: 2rem 0;
-            margin: 2rem 0;
+            padding: 1rem 0;
+            margin: 1rem 0;
             border-radius: 8px;
         }
 
@@ -66,8 +68,8 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
         }
 
         .location-link {
@@ -76,6 +78,9 @@
             transition: color 0.3s ease;
             display: block;
             margin-bottom: 1rem;
+            text-align: left;
+            margin: 0 auto 1rem;
+            width: fit-content;
         }
 
         .location-link:hover {
@@ -106,8 +111,8 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
         }
 
         .research-card h3 {
@@ -118,18 +123,19 @@
         .apply-button {
             background-color: #1f4d7a;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 25px;
             font-size: 1.1rem;
             border-radius: 5px;
             transition: all 0.3s ease;
             display: inline-block;
             text-decoration: none;
-            margin-top: 2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0rem;
         }
 
         .apply-button:hover {
-            background-color: #d42e2e;
-            transform: translateY(-2px);
+            background-color: #27ae60;
+            transform: translateY(-1px);
             text-decoration: none;
             color: white;
         }
@@ -191,7 +197,36 @@
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Team Photo Section -->
+        <div class="research-section">
+            <h2 class="mb-4">Join us!</h2>
+            <p>We are always looking for motivated, independent, and skilled scientists to join our group to pursue new and exciting research. As part of the TCP group, researchers should have ample opportunity to exchange ideas, transfer knowledge, and to pick up new expertise.</p>
+            <p>Applications for funding can be made via Marie Curie Fellowships, Humboldt Fellowships for German Citizens, European Research Council grants, and Luxembourg National Research Fund grants (FNR) [Individual PhD grants, CORE Jr., ATTRACT, etc.].</p>
+            <p>Applications for PhD studies and postdoctoral positions are accepted from qualified candidates at any time.</p>
+            <div>
+                <h5>Research Areas:</h5>
+                <ul>
+                    <li>
+                        <strong>Multiscale Modelling:</strong> Combining first principles, coarse graining, and mathematical approaches to bring quantum mechanical level of accuracy from the atomistic scale to micro-scale systems. This involves developing mathematical approaches and code that can tackle large and complex systems efficiently.
+                    </li>
+
+                    <li>
+                        <strong>Machine Learning in Chemical Physics:</strong> Machine learning of global molecular potential-energy surfaces and gaining physical and chemical insights from machine-learned potentials. The main goal is to understand and extend current machine learning approaches and to be able to go beyond their "black box" nature.
+                    </li>
+
+                    <li>
+                        <strong>Non-covalent Interactions:</strong> Understanding and developing a framework for accurately capturing non-covalent interactions. In particular, we are looking to expand our expertise on peculiar non-covalent effects in confinement, charged environments, optically-excited states, and van der Waals/Casimir physics in large systems.
+                    </li>
+
+                    <li>
+                        <strong>Statistical Mechanics in Physics and Chemistry:</strong> Development and application of improved path integral methods for quantum nuclear effects.
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+            <a href="mailto:alexandre.tkatchenko@uni.lu" class="apply-button">Apply to our group</a>
+            </div>
+        </div>
+        <!-- Team Photo Section 
         <div class="team-photo-section">
             <div class="container">
                 <div class="team-photo-container">
@@ -199,6 +234,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <!-- Location Section -->
         <div class="location-section">
@@ -216,12 +252,17 @@
                                 162a, avenue de la Faïencerie<br>
                                 L-1511 Luxembourg
                             </a>
+                            <div class="team-photo-container">
+                                <img src="assets/img/tcpb.jpg" alt="TCP Team Photo" class="img-fluid">
+                            </div>
                             <div class="social-links">
-                                <a href="https://twitter.com/TCPUniLu" 
-                                   class="btn btn-outline-primary" 
-                                   target="_blank">
-                                    <i class="fab fa-twitter mr-2"></i>Follow @TCPUniLu
-                                </a>
+                                <div class="text-center">
+                                    <a href="https://twitter.com/TCPUniLu" 
+                                       class="btn btn-outline-primary" 
+                                       target="_blank">
+                                        <i class="fab fa-twitter mr-2"></i>Follow @TCPUniLu
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -234,48 +275,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Join Us Section remains exactly the same -->
-        <div class="research-section">
-            <h2 class="mb-4">Join us!</h2>
-            <p class="lead mb-4">
-                We are always looking for motivated, independent, and skilled scientists to join our group to pursue new and exciting research. 
-                As part of the TCP group, researchers should have ample opportunity to exchange ideas, transfer knowledge, and to pick up new expertise.
-            </p>
-
-            <div class="research-card">
-                <h3><i class="fas fa-microscope mr-2"></i>Multiscale Modelling</h3>
-                <p>Combining first principles, coarse graining, and mathematical approaches to bring quantum mechanical level of accuracy from the atomistic scale to micro-scale systems. This involves developing mathematical approaches and code that can tackle large and complex systems efficiently.</p>
-            </div>
-
-            <div class="research-card">
-                <h3><i class="fas fa-brain mr-2"></i>Machine Learning in Chemical Physics</h3>
-                <p>Machine learning of global molecular potential-energy surfaces and gaining physical and chemical insights from machine-learned potentials. The main goal is to understand and extend current machine learning approaches and to be able to go beyond their "black box" nature.</p>
-            </div>
-
-            <div class="research-card">
-                <h3><i class="fas fa-atom mr-2"></i>Non-covalent Interactions</h3>
-                <p>Understanding and developing a framework for accurately capturing non-covalent interactions. In particular, we are looking to expand our expertise on peculiar non-covalent effects in confinement, charged environments, optically-excited states, and van der Waals/Casimir physics in large systems.</p>
-            </div>
-
-            <div class="research-card">
-                <h3><i class="fas fa-chart-line mr-2"></i>Statistical Mechanics in Physics and Chemistry</h3>
-                <p>Development and application of improved path integral methods for quantum nuclear effects.</p>
-            </div>
-
-            <p class="mt-4">
-                Applications for funding can be made via Marie Curie Fellowships, Humboldt Fellowships for German Citizens, 
-                European Research Council grants, and Luxembourg National Research Fund grants (FNR) [Individual PhD grants, CORE Jr., ATTRACT, etc.].
-            </p>
-
-            <p>Applications for PhD studies and postdoctoral positions are accepted from qualified candidates at any time.</p>
-
-            <div class="text-center">
-                <a href="mailto:alexandre.tkatchenko@uni.lu" class="apply-button">
-                    <i class="fas fa-paper-plane mr-2"></i>Apply to our group
-                </a>
             </div>
         </div>
     </div>
