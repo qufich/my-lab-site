@@ -18,17 +18,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
+    <!-- Common styles -->
+    <link rel="stylesheet" href="../pages/assets/css/main.css">
+
+
     <style>
-        body { padding-top: 70px; }
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 2rem;
         }
-        .navbar .nav-link {
-            color: rgba(0,0,0,0.8) !important;
-            font-weight: 500;
-        }
-        .navbar-brand img { height: 40px; }
+
         .member-item {
             padding: 20px;
             margin-bottom: 20px;
@@ -37,63 +38,34 @@
             background: white;
             transition: all 0.3s ease;
         }
+
         .member-item:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
             transform: translateY(-2px);
         }
+
         .member-name {
             color: #333;
             margin-bottom: 10px;
             font-size: 1.25rem;
             font-weight: 500;
         }
+
         .member-meta {
             color: #666;
             font-size: 0.9em;
             margin-bottom: 8px;
         }
+
         .member-topic {
             color: #333;
             font-style: italic;
             margin-bottom: 8px;
         }
+
         .member-current {
             color: #007bff;
             font-weight: 500;
-        }
-        footer {
-            background-color: white;
-            border-top: 1px solid #e0e0e0;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-        footer.visible {
-            transform: translateY(0);
-        }
-        .content-wrapper {
-            padding-bottom: 70px;
-        }
-        progress {
-            position: fixed;
-            top: 56px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            border: none;
-            background: transparent;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        progress::-webkit-progress-bar {
-            background: transparent;
-        }
-        progress::-webkit-progress-value {
-            background: #007bff;
         }
     </style>
 </head>

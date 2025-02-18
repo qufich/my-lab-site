@@ -18,17 +18,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
+    <!-- Common styles -->
+    <link rel="stylesheet" href="../pages/assets/css/main.css">
+
     <style>
-        body { padding-top: 50px; }
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        }
-        .navbar .nav-link {
-            color: rgba(0,0,0,0.8) !important;
-            font-weight: 500;
-        }
-        .navbar-brand img { height: 40px; }
         .software-item {
             padding: 15px;
             margin-bottom: 10px;
@@ -37,37 +30,23 @@
             background: white;
             transition: all 0.3s ease;
         }
+
         .software-item:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
             transform: translateY(-1px);
         }
+
         .software-title {
             color: #333;
             margin-bottom: 10px;
             font-size: 1.25rem;
             font-weight: 500;
         }
+
         .software-description {
             color: #666;
             font-size: 0.95em;
             margin-bottom: 12px;
-        }
-        footer {
-            background-color: white;
-            border-top: 1px solid #e0e0e0;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-        footer.visible {
-            transform: translateY(0);
-        }
-        .content-wrapper {
-            padding-bottom: 70px;
         }
     </style>
 </head>

@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--title>Theoretical Chemical Physics</title-->
-
+    
     <!-- Bootstrap & MDB -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css">
@@ -18,44 +17,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
+    <!-- Common styles -->
+    <link rel="stylesheet" href="pages/assets/css/main.css">
+
+    <!-- Page specific styles -->
     <style>
-        /* Custom styles */
-        body {
-            padding-top: 70px;
-        }
 
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            }
         }
-
-        .navbar .nav-link {
-            color: rgba(0,0,0,0.8) !important;
-            font-weight: 500;
-        }
-
-        .navbar .nav-link:hover {
-            color: rgba(0,0,0,1) !important;
-        }
-
-        /* Added styles for logo */
-        .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .post-header {
-            margin-bottom: 2rem;
-        }
-
-        .post-title {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
+    
         .desc {
             font-size: 1.2rem;
             color: #666;
+            line-height: 1.6;
         }
 
         .caption {
@@ -64,39 +44,18 @@
             text-align: center;
         }
 
-
-        footer {
-            background-color: white;
-            border-top: 1px solid #e0e0e0;
-            padding: 1rem 0;
-            width: 100%;
-            margin-top: 20px; /* Adds space above the footer */
+        /* Added spacing for caption */
+        .caption br {
+            margin-bottom: 0.5rem;
         }
 
-
-        footer.visible {
-            transform: translateY(0);
-        }
-
-        /* Progress bar styles */
-        progress {
+        /* Progress bar styling specific to index page */
+        #progress {
             position: fixed;
             top: 56px;
             left: 0;
             width: 100%;
             height: 2px;
-            border: none;
-            background: transparent;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-
-        progress::-webkit-progress-bar {
-            background: transparent;
-        }
-
-        progress::-webkit-progress-value {
-            background: #007bff;
         }
     </style>
 </head>

@@ -1,10 +1,10 @@
-/* General styles */
+/* Base styles */
 body {
     padding-top: 70px;
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Navigation - Updated for consistency */
+/* Navigation */
 .navbar {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
@@ -25,20 +25,17 @@ body {
     font-weight: 600;
 }
 
+/* Navigation links */
 .navbar .nav-link {
-    color: rgb(108, 117, 125) !important;  /* Base gray color */
-    font-weight: 400;
-    padding: 0.5rem 1rem !important;
+    color: #000 !important;
+    font-weight: 600;
     transition: color 0.2s ease;
+    padding: 0.5rem 1rem !important;
 }
 
 .navbar .nav-link:hover {
-    color: rgb(33, 37, 41) !important;
-}
-
-.navbar .nav-link.active {
-    color: #007bff !important;
-    font-weight: 500;
+    color: #000 !important;
+    opacity: 0.8;
 }
 
 .navbar .dropdown-menu {
@@ -47,23 +44,25 @@ body {
 }
 
 .navbar .dropdown-item {
-    color: rgb(108, 117, 125);
-    font-weight: 400;
+    color: #000;
+    font-weight: 600;
     padding: 0.5rem 1rem;
     transition: all 0.2s ease;
 }
 
 .navbar .dropdown-item:hover {
-    color: rgb(33, 37, 41);
     background-color: rgba(0, 0, 0, 0.05);
 }
 
 .navbar .dropdown-item.active {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Content styles - Preserved from original */
+/* Common content styles */
+.content-wrapper {
+    padding-bottom: 70px;
+}
+
 .post-header {
     margin-bottom: 2rem;
 }
@@ -73,77 +72,35 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.desc {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.caption {
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-}
-
-/* Team member styles - Preserved from original */
-.team-member {
-    margin-bottom: 2rem;
-    padding: 1rem;
+/* Common card styles */
+.card-shadow {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 
-.team-member figure {
-    margin: 0;
-    padding: 0;
+.card-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
-.team-member .member-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid white;
+footer.visible {
+    transform: translateY(0);
 }
 
-.member-info {
-    padding: 1rem;
-}
-
-.member-info h4 {
-    margin-bottom: 0.5rem;
-    color: #24292e;
-}
-
-.contact-info {
-    margin: 0.5rem 0;
-}
-
-.contact-info a {
-    color: #0366d6;
-    text-decoration: none;
-    margin-right: 1rem;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.bio {
-    color: #586069;
-    margin-top: 1rem;
-}
-
-/* Progress bar - Preserved from original */
+/* Progress bar */
 progress {
     position: fixed;
     top: 56px;
@@ -152,8 +109,8 @@ progress {
     height: 2px;
     border: none;
     background: transparent;
-    -webkit-appearance: none;
     appearance: none;
+    -webkit-appearance: none;
 }
 
 progress::-webkit-progress-bar {
@@ -164,15 +121,7 @@ progress::-webkit-progress-value {
     background: #007bff;
 }
 
-/* Footer - Preserved from original */
-footer {
-    background-color: white;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    border-top: 1px solid #eee;
-}
-
-/* Mobile responsiveness - Updated */
+/* Responsive design */
 @media (max-width: 768px) {
     .navbar-collapse {
         position: absolute;
@@ -187,16 +136,6 @@ footer {
 
     .navbar-nav {
         margin-top: 0.5rem;
-    }
-
-    .team-member figure {
-        max-width: 200px;
-        margin: 0 auto;
-    }
-    
-    .member-info {
-        text-align: center;
-        padding-top: 1.5rem;
     }
 }
 
@@ -214,34 +153,4 @@ footer {
     .dropdown-item {
         padding: 0.5rem 1.5rem;
     }
-}
-
-/* Navbar toggle button */
-.navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 0.25rem;
-    margin-left: auto;
-}
-
-/* Remove conflicting icon-bar styles */
-.icon-bar {
-    display: none;
-}
-
-footer {
-    /* ... existing styles ... */
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-}
-
-footer.visible {
-    transform: translateY(0);
-}
-.content-wrapper {
-    padding-bottom: 60px;
 }
